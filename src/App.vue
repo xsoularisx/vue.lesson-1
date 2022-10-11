@@ -2,21 +2,21 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <div class="screen">
-      <input type="text" v-model.number="operand_1">
+      <input type="text" v-model.number="operand_1" name="op1">
       {{operator}}
-      <input type="text" v-model.number="operand_2">
+      <input type="text" v-model.number="operand_2" name="op2">
       =
-      <input type="text" readonly v-model.number="result">
+      <input type="text" readonly v-model.number="result" name="result">
     </div>
     <div class="error" v-if="error">{{error}}</div>
     <div class="operators">
-      <button v-on:click="operator = '+'">+</button>
-      <button v-on:click="operator = '-'">-</button>
-      <button v-on:click="operator = '*'">*</button>
-      <button v-on:click="operator = '/'">/</button>
-      <button v-on:click="operator = '**'">**</button>
-      <button v-on:click="operator = '%'">%</button>
-      <button v-on:click="getResult">=</button>
+      <button name="+" v-on:click="operator = '+'">+</button>
+      <button name="-" v-on:click="operator = '-'">-</button>
+      <button name="*" v-on:click="operator = '*'">*</button>
+      <button name="/" v-on:click="operator = '/'">/</button>
+      <button name="**" v-on:click="operator = '**'">**</button>
+      <button name="%" v-on:click="operator = '%'">%</button>
+      <button name="=" v-on:click="getResult">=</button>
     </div>
     <form class="checkbox">
       <input type="checkbox" id="checkbox" v-model="checked">
